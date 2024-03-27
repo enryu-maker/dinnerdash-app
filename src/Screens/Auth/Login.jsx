@@ -14,20 +14,20 @@ export default function Login() {
             }}
             className='w-full flex justify-center sm:justify-between items-center h-[100vh]'
         >
-            <div className='h-full w-[40%] hidden sm:flex bg-slate-200' />
+            <div className='h-full w-[40%] hidden sm:flex bg-gray-200' />
             <div className='h-full sm:w-[60%] flex flex-col justify-center items-center'>
                 <div className=' fixed top-5 right-10'>
                     <p
                         className=' font-poppins text-gray-500 text-base text-start w-full'
                     >
-                        Don't have an account? <motion.a
+                        Don't have an account?&nbsp;<motion.a
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
                             href='/auth/register'
-                            className=' text-green-600 font-bold'>Register</motion.a>
+                            className=' text-green-600 font-bold underline underline-offset-2'>Book A Demo </motion.a>
                     </p>
                 </div>
-                <div className=' h-[75%]  w-[88%]  sm:w-[50%] flex flex-col items-center justify-evenly'>
+                <div className=' h-[55%]  w-[88%]  sm:w-[50%] flex flex-col items-center justify-evenly'>
                     <p
                         className=' font-poppins text-4xl text-black font-black text-start w-full'
                     >
@@ -38,7 +38,7 @@ export default function Login() {
                     >
                         Please log in to access your Kitchen dashboard
                     </p>
-                    <motion.button
+                    {/* <motion.button
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         type="submit"
@@ -56,7 +56,7 @@ export default function Login() {
                             Or sign in with
                         </p>
                         <div>--------------</div>
-                    </div>
+                    </div> */}
                     <div className="space-y-8 sm:mx-auto w-full sm:w-full">
                         <div>
                             <label
@@ -76,7 +76,7 @@ export default function Login() {
                                         // setData({ ...data, email: e.target.value });
                                     }}
                                     required
-                                    className="block w-full p-5 border-2 py-1.5 text-gray-900"
+                                    className="block w-full p-5 border-2 py-1.5 text-gray-900 focus:outline-green-600"
                                 />
                             </div>
                         </div>
@@ -108,7 +108,7 @@ export default function Login() {
                                         // setData({ ...data, password: e.target.value });
                                     }}
                                     required
-                                    className="block w-full p-5 border-2 py-1.5 text-gray-900 "
+                                    className="block w-full p-5 border-2 py-1.5 text-gray-900 focus:outline-green-600 "
                                 />
                             </div>
                         </div>
@@ -136,6 +136,18 @@ export default function Login() {
                                     'Login'
                             }
                         </motion.button>
+                        <motion.p
+                        className=' mt-2 font-poppins text-gray-500 text-xs text-center w-full'
+                    >
+                        By signing in, you agree to the <motion.a
+                            href='/auth/login'
+                            whileHover={{ scale: 1.1 }}
+                            whileTap={{ scale: 0.9 }}
+                            className=' text-green-600 font-bold'>Terms & Conditions</motion.a> and <motion.a
+                                href='/auth/login'
+                                whileHover={{ scale: 1.1 }}
+                                whileTap={{ scale: 0.9 }} className=' text-green-600 font-bold'>Privacy Policy</motion.a> of dinnerDash
+                    </motion.p>
                     </div>
                 </div>
             </div>
