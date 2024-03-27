@@ -10,23 +10,31 @@ import {
 } from "@material-tailwind/react";
 export default function Store() {
     const [activeTab, setActiveTab] = React.useState('Store Info');
+    const [activeID, setActiveID] = React.useState(0);
+
     const data = [
         {
+            id: 0,
             name: "Store Info"
         },
         {
+            id: 1,
             name: "Tables"
         },
         {
+            id: 2,
             name: "Opening Hours"
         },
         {
+            id: 3,
             name: "Social Accounts"
         },
         {
+            id: 4,
             name: "Wi-Fi"
         },
         {
+            id: 5,
             name: "Location Details"
         },
     ]
@@ -52,7 +60,10 @@ export default function Store() {
                                     <Tab
                                         key={item?.name}
                                         value={item?.name}
-                                        onClick={() => setActiveTab(item?.name)}
+                                        onClick={() => {
+                                            setActiveTab(item?.name)
+                                            setActiveID(item?.id)
+                                        }}
                                         className={
                                             activeTab === item?.name ? "text-green-600 font-poppins text-base font-bold tracking-wider" : "text-gray-900 tracking-wider text-base font-poppins"
                                         }
