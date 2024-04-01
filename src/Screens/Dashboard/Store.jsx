@@ -8,6 +8,13 @@ import {
     Tab,
     TabPanel,
 } from "@material-tailwind/react";
+import Info from './StoreComp/Info';
+import Tables from './StoreComp/Tables';
+import Hours from './StoreComp/Hours';
+import Social from './StoreComp/Social';
+import Wifi from './StoreComp/Wifi';
+import Location from './StoreComp/Location';
+
 export default function Store() {
     const [activeTab, setActiveTab] = React.useState('Store Info');
     const [activeID, setActiveID] = React.useState(0);
@@ -15,27 +22,34 @@ export default function Store() {
     const data = [
         {
             id: 0,
-            name: "Store Info"
+            name: "Store Info",
+            comp : <Info/>
         },
         {
             id: 1,
-            name: "Tables"
+            name: "Tables",
+            comp : <Tables/>
         },
         {
             id: 2,
-            name: "Opening Hours"
+            name: "Opening Hours",
+            comp : <Hours/>
         },
         {
             id: 3,
-            name: "Social Accounts"
+            name: "Social Accounts",
+            comp : <Social/>
         },
         {
             id: 4,
-            name: "Wi-Fi"
+            name: "Wi-Fi",
+            comp : <Wifi/>
         },
         {
             id: 5,
-            name: "Location Details"
+            name: "Location Details",
+            comp : <Location/>
+            
         },
     ]
     return (
@@ -72,6 +86,9 @@ export default function Store() {
                                     </Tab>
                                 ))}
                             </TabsHeader>
+                            <TabsBody>
+                                {data[activeID].comp}
+                            </TabsBody>
                         </Tabs>
                     </div>
                 </div>
