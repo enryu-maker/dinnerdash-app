@@ -14,6 +14,7 @@ import Hours from './StoreComp/Hours';
 import Social from './StoreComp/Social';
 import Wifi from './StoreComp/Wifi';
 import Location from './StoreComp/Location';
+import Expenses from './Expenses';
 
 export default function Store() {
     const [activeTab, setActiveTab] = React.useState('Store Info');

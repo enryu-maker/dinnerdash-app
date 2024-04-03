@@ -46,6 +46,9 @@ export default function SideTab() {
                     <BiFoodMenu size={20} /> &nbsp; Menu
                 </motion.button>
                 <motion.button
+                    onClick={() => {
+                        navigate('/home/orders')
+                    }}
                     whileHover={location.pathname.split('/')[2] === "orders" ? { scale: 1.0 } : { scale: 1.1 }}
                     className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "orders" ? "border-green-600 border-r-2 text-green-600 font-bold  " : null} font-poppins`}
                 >
@@ -58,27 +61,33 @@ export default function SideTab() {
                     <MdOutlineInventory2 size={20} /> &nbsp; Inventory
                 </motion.button> */}
                 <motion.button
-                    whileHover={location.pathname.split('/')[2] === "customers" ? { scale: 1.0 } : { scale: 1.1 }}
-                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "customers" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
+                    onClick={() => {
+                        navigate('/home/customer')
+                    }}
+                    whileHover={location.pathname.split('/')[2] === "customer" ? { scale: 1.0 } : { scale: 1.1 }}
+                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "customer" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
                 >
                     <FiUsers size={20} /> &nbsp; Customers
                 </motion.button>
 
-                <motion.button
+                {/* <motion.button
                     whileHover={location.pathname.split('/')[2] === "taxation" ? { scale: 1.0 } : { scale: 1.1 }}
                     className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "taxation" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
                 >
                     <HiOutlineReceiptTax size={20} /> &nbsp; Taxation
-                </motion.button>
+                </motion.button> */}
                 <motion.button
-                    whileHover={location.pathname.split('/')[2] === "taxation" ? { scale: 1.0 } : { scale: 1.1 }}
-                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "taxation" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
+                    onClick={() => {
+                        navigate('/home/employee')
+                    }}
+                    whileHover={location.pathname.split('/')[2] === "employee" ? { scale: 1.0 } : { scale: 1.1 }}
+                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "employee" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
                 >
                     <FaRegUser size={20} /> &nbsp; My Employees
                 </motion.button>
                 <motion.button
-                    whileHover={location.pathname.split('/')[2] === "orders" ? { scale: 1.0 } : { scale: 1.1 }}
-                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "orders" ? "border-green-600 border-r-2 text-green-600 font-bold  " : null} font-poppins`}
+                    whileHover={location.pathname.split('/')[2] === "reports" ? { scale: 1.0 } : { scale: 1.1 }}
+                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "reports" ? "border-green-600 border-r-2 text-green-600 font-bold  " : null} font-poppins`}
                 >
                     <TbReportAnalytics size={20} /> &nbsp; Reports
                 </motion.button>

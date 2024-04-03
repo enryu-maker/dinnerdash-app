@@ -30,7 +30,7 @@ export default function Header() {
                     <MdOutlineNotificationsActive size={22} />
                 </button>
                 <motion.div className='flex justify-center items-center space-x-2'>
-                    <p className=' font-poppins text-sm font-semibold tracking-widest'>Komal </p> <div className='h-8 w-8 rounded-full bg-green-600'/>
+                    <p className=' font-poppins text-sm font-semibold tracking-widest'>Admin </p> <div className='h-8 w-8 rounded-full bg-green-600'/>
                 </motion.div>
             </div>
         </div>
