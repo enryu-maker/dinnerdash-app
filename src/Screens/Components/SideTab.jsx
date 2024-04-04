@@ -8,6 +8,7 @@ import { LiaStoreAltSolid } from "react-icons/lia";
 import { FiUsers, FiSettings, FiHome } from "react-icons/fi";
 import { HiOutlineReceiptTax } from "react-icons/hi";
 import { useLocation, useNavigate } from 'react-router-dom';
+import { MdQrCode } from "react-icons/md";
 import { TbReportAnalytics } from "react-icons/tb";
 export default function SideTab() {
     const location = useLocation()
@@ -83,7 +84,16 @@ export default function SideTab() {
                     whileHover={location.pathname.split('/')[2] === "employee" ? { scale: 1.0 } : { scale: 1.1 }}
                     className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "employee" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
                 >
-                    <FaRegUser size={20} /> &nbsp; My Employees
+                    <FaRegUser size={20} /> &nbsp; My Team
+                </motion.button>
+                <motion.button
+                    onClick={() => {
+                        navigate('/home/employee')
+                    }}
+                    whileHover={location.pathname.split('/')[2] === "employee" ? { scale: 1.0 } : { scale: 1.1 }}
+                    className={`flex w-full  justify-start pl-4 items-center text-base py-2  ${location.pathname.split('/')[2] === "employee" ? "border-green-600 border-r-2 text-green-600 font-bold " : null} font-poppins`}
+                >
+                    <MdQrCode size={20} /> &nbsp; Customize QR
                 </motion.button>
                 <motion.button
                     whileHover={location.pathname.split('/')[2] === "reports" ? { scale: 1.0 } : { scale: 1.1 }}
