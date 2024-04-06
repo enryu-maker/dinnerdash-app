@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/dinnerdash-app/static/css/main.365958b2.css",
+    "main.js": "/dinnerdash-app/static/js/main.6f121655.js",
+    "static/js/453.b540e639.chunk.js": "/dinnerdash-app/static/js/453.b540e639.chunk.js",
+    "static/media/logo.png": "/dinnerdash-app/static/media/logo.016780f609e6b204582f.png",
+    "static/media/table.png": "/dinnerdash-app/static/media/table.3dbada36bfa2044c2542.png",
+    "index.html": "/dinnerdash-app/index.html",
+    "main.365958b2.css.map": "/dinnerdash-app/static/css/main.365958b2.css.map",
+    "main.6f121655.js.map": "/dinnerdash-app/static/js/main.6f121655.js.map",
+    "453.b540e639.chunk.js.map": "/dinnerdash-app/static/js/453.b540e639.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.365958b2.css",
+    "static/js/main.6f121655.js"
+  ]
+}
