@@ -1,6 +1,7 @@
 {
   "name": "dinnerdash-app",
   "version": "0.1.0",
+  "homepage": "https://enryu-maker.github.io/dinnerdash-app/",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -11,6 +12,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.6.8",
     "framer-motion": "^11.0.20",
+    "gh-pages": "^6.1.1",
     "i": "^0.3.7",
     "npm": "^10.5.0",
     "react": "^18.2.0",
@@ -23,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
